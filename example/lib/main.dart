@@ -6,6 +6,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -67,7 +69,7 @@ class HomePage extends StatelessWidget {
 }
 
 class ValuesTab extends StatelessWidget {
-  const ValuesTab();
+  const ValuesTab({Key? key}) : super(key: key);
 
   Widget _box(BuildContext context, String title, double height) {
     final spacing = Spacing.of(context);
@@ -93,7 +95,7 @@ class ValuesTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final spacing = Spacing.of(context);
     return Container(
-      color: Colors.red.withOpacity(0.2),
+      color: Colors.red.withValues(alpha: 0.2),
       margin: spacing.insets.all.big,
       padding: spacing.insets.all.normal,
       child: ListView(
@@ -112,7 +114,7 @@ class ValuesTab extends StatelessWidget {
 }
 
 class SpaceTab extends StatelessWidget {
-  const SpaceTab();
+  const SpaceTab({Key? key}) : super(key: key);
 
   Widget _box(BuildContext context) {
     return Container(
@@ -126,7 +128,7 @@ class SpaceTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final spacing = Spacing.of(context);
     return Container(
-      color: Colors.blue.withOpacity(0.2),
+      color: Colors.blue.withValues(alpha: 0.2),
       margin: spacing.insets.all.big,
       padding: spacing.insets.all.normal,
       child: ListView(
@@ -153,7 +155,7 @@ class SpaceTab extends StatelessWidget {
 }
 
 class SpacedFlexTab extends StatelessWidget {
-  const SpacedFlexTab();
+  const SpacedFlexTab({Key? key}) : super(key: key);
 
   Widget _box(BuildContext context) {
     return Container(
@@ -167,7 +169,7 @@ class SpacedFlexTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final spacing = Spacing.of(context);
     return Container(
-      color: Colors.green.withOpacity(0.2),
+      color: Colors.green.withValues(alpha: 0.2),
       child: ListView(
         children: [
           SpacedColumn.normal(

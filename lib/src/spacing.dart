@@ -18,22 +18,19 @@ class Spacing extends StatelessWidget {
   ///
   /// The [dataBuilder] and [child] arguments must not be null.
   const Spacing({
-    Key? key,
+    super.key,
     required this.child,
     required this.dataBuilder,
-  }) : super(key: key);
+  });
 
   /// Applies the given [data] to [child].
   ///
   /// The [data] and [child] arguments must not be null.
   Spacing.fixed({
-    Key? key,
+    super.key,
     required this.child,
     required SpacingData data,
-  })   : assert(data != null),
-        assert(child != null),
-        dataBuilder = ((BuildContext context) => data),
-        super(key: key);
+  })   : dataBuilder = ((BuildContext context) => data);
 
   /// The data from the closest [Spacing] instance that encloses the given
   /// context.
@@ -123,13 +120,9 @@ extension SpaceSizeExtension on SpaceSize {
 class _SpacingDataProvider extends InheritedWidget {
   final SpacingData data;
   const _SpacingDataProvider({
-    Key? key,
-    required Widget child,
+    required super.child,
     required this.data,
-  }) : super(
-          key: key,
-          child: child,
-        );
+  });
 
   @override
   bool updateShouldNotify(_SpacingDataProvider oldWidget) {

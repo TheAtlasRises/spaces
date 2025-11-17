@@ -61,14 +61,12 @@ class Space extends StatelessWidget {
   /// The [mainAxisExtent] must not be null and must be positive.
   /// The [crossAxisExtent] must be either null or positive.
   const Space({
-    Key? key,
-    required double mainAxisExtent,
+    super.key,
+    required double this.mainAxisExtent,
     this.crossAxisExtent,
     this.color,
-  })  : mainAxisExtent = mainAxisExtent,
-        size = null,
-        assert(mainAxisExtent > 0),
-        super(key: key);
+  })  : size = null,
+        assert(mainAxisExtent > 0);
 
   /// Creates a widget that takes an `extraSmall` amount of space in the
   /// direction of its parent.
@@ -77,6 +75,7 @@ class Space extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const Space.extraSmall({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.extraSmall,
@@ -89,6 +88,7 @@ class Space extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const Space.small({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.small,
@@ -101,6 +101,7 @@ class Space extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const Space.semiSmall({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.semiSmall,
@@ -113,6 +114,7 @@ class Space extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const Space.normal({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.normal,
@@ -125,6 +127,7 @@ class Space extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const Space.semiBig({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.semiBig,
@@ -137,6 +140,7 @@ class Space extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const Space.big({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.big,
@@ -149,6 +153,7 @@ class Space extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const Space.extraBig({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.extraBig,
@@ -210,14 +215,12 @@ class SliverSpace extends StatelessWidget {
   /// The [mainAxisExtent] must not be null and must be positive.
   /// The [crossAxisExtent] must be either null or positive.
   const SliverSpace({
-    Key? key,
-    required double mainAxisExtent,
+    super.key,
+    required double this.mainAxisExtent,
     this.crossAxisExtent,
     this.color,
-  })  : mainAxisExtent = mainAxisExtent,
-        size = null,
-        assert(mainAxisExtent > 0),
-        super(key: key);
+  })  : size = null,
+        assert(mainAxisExtent > 0);
 
   /// Creates a widget that takes an `extraSmall` amount of space in the
   /// direction of its parent.
@@ -226,6 +229,7 @@ class SliverSpace extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const SliverSpace.extraSmall({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.extraSmall,
@@ -238,6 +242,7 @@ class SliverSpace extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const SliverSpace.small({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.small,
@@ -250,6 +255,7 @@ class SliverSpace extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const SliverSpace.semiSmall({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.semiSmall,
@@ -262,6 +268,7 @@ class SliverSpace extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const SliverSpace.normal({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.normal,
@@ -274,6 +281,7 @@ class SliverSpace extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const SliverSpace.semiBig({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.semiBig,
@@ -286,6 +294,7 @@ class SliverSpace extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const SliverSpace.big({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.big,
@@ -298,6 +307,7 @@ class SliverSpace extends StatelessWidget {
   ///
   /// The [crossAxisExtent] must be either null or positive.
   const SliverSpace.extraBig({
+    super.key,
     this.crossAxisExtent,
     this.color,
   })  : size = SpaceSize.extraBig,
